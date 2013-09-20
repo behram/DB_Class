@@ -1,13 +1,14 @@
 <?php
-header('Content-type: text/html; charset=utf8');
-define('ATTAINABLE', true);
-require_once 'dtbs.php';
+require_once 'config.php';
 
-$dtbs = new Dtbs;
+$dtbs = new app\lib\Dtbs;
+
 echo '<pre>';
+//print_r($dtbs->uyeler->select()->result());
+
 /*
  *  /// Where çatal sokmak
- * >>>>>> öncekiyle sonrakiyle bağ
+ * >>>>>> sonrakiyle bağ
  * &      - a - and
  * |      - o - or
  * 
@@ -24,24 +25,25 @@ echo '<pre>';
  * null - n - bu parametre boş gönderilecek ise
  *  
  * /// Where çatala sokmayacaksak default çatal parametreleri
- * 
- *  öncekiyle bağ            > n
+ *
  *  sonrakiyle bağ           > n
  *  değişken türü            > n
  *  karşılaştırma operatörü  > t
- *  ========================== :n.n.n.t
+ *  ========================== :n.n.t
  * 
  * 
- * dizayn = öncekiyle bağ.sonrakiyle bağ.değişken türü.karşılaştırma operatörü
+ * dizayn = sonrakiyle bağ.değişken türü.karşılaştırma operatörü
  */
-//$dtbs->where('uye_id:n.n.i.b', 10);
+print_r($dtbs//->where('uye_id:n.i.b', 10);
 //exit;
-$result = $dtbs->uyeler->select()
-        ->where('uye_id:n.n.i.b', 10);
+// property = özellik
+// çatal = Fork
+        //->where('uye_id:n.n.i.b', 10);
         //->where('uye_id:n.a.i.f', 10)
-        //->where('uye_id', 10) == ->where('uye_id:n.n.s.t', 10)
-        //->where(array('uye_id:n.a.i.f' => 10, 'uye_aktif:a.n.i.t'))
-        //->result();
-print_r($result);
+        //->where('uye_id', 10) == ->where('uye_id:n.s.t', 10)
+        ->uyeler->select()
+        ->where(array('uye_id:n.i.t' => 12))
+        ->result());
+
 
 ?>
