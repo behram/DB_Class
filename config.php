@@ -5,7 +5,7 @@ define('PATH', realpath('.').'/');
 
 function __autoload($className)
 {
-    $classPath = str_replace('\\', '/', rtrim(ltrim($className, '\\'), '\\'));
-    require_once PATH.$classPath.'.php';
+    $classPathReplace = str_replace('\\', '/', rtrim(ltrim($className, '\\'), '\\'));
+    require_once PATH.$classPathReplace.'.php';
     
 }
