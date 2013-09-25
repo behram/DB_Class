@@ -1,0 +1,61 @@
+{
+    "WhereFork": [
+        {
+            "sonrakiBag": [
+                {
+                    "&&": "a",
+                    "||": "o"       
+                }
+            ],
+            "veriType": [
+                {
+                    "int"   : "i",
+                    "string": "s",
+                    "float" : "f"
+                }
+            ],
+            "karsilastirmaOperator": [
+                {
+                    "=" : "t",
+                    "<>": "f",
+                    "<" : "s",
+                    ">" : "b"
+                }
+            ],
+            "parantezAcKapa": [
+                {
+                    "(" : "o",
+                    ")" : "c",
+                    "()": "oc"
+                }
+            ],
+            "nulDeger": [
+                {
+                    "null": "n"
+                }
+            ]
+        }
+    ],
+    "insertFork": [
+        {
+            "veriType": [
+                {
+                    "int"   : "i",
+                    "string": "s",
+                    "float" : "f"
+                }
+            ]
+        }
+    ],
+    "updateFork": [
+        {
+            "veriType": [
+                {
+                    "int"   : "i",
+                    "string": "s",
+                    "float" : "f"
+                }
+            ]
+        }
+    ]        
+}
